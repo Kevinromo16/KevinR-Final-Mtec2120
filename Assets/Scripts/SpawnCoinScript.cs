@@ -9,19 +9,22 @@ public class SpawnCoinScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+     if (Input.GetKeyDown(KeyCode.Space))
         {
-           Vector3 randomPosition = new Vector3(Random.Range(190, 350), 1, Random.Range(380, 550));
+           Vector3 randomPosition = new Vector3(Random.Range(190, 250), 1, Random.Range(350, 450));
             Instantiate(coinPrefab, randomPosition, Quaternion.identity); 
         }
+ 
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Vector3 randomPosition = new Vector3(Random.Range(190, 350), 1, Random.Range(380, 550));
+            Vector3 randomPosition = new Vector3(Random.Range(190, 250), 1, Random.Range(350, 450));
             Instantiate(coinPrefab, randomPosition, Quaternion.identity);
         }
+        
     }
 }

@@ -279,13 +279,7 @@ namespace StarterAssets
             }
         }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.gameObject.tag == "Coin")
-            {
-                ScoreManager.scoreCount += 1; 
-            }
-        }
+       
         private void JumpAndGravity()
         {
             if (Grounded)
